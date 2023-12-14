@@ -32,7 +32,7 @@ Partial Class frmReturn
         Me.grp_Rgroup = New System.Windows.Forms.GroupBox
         Me.txtRname = New System.Windows.Forms.TextBox
         Me.cboRborrowerId = New System.Windows.Forms.TextBox
-        Me.txtRbookTitle = New System.Windows.Forms.TextBox
+        Me.txtRTitle = New System.Windows.Forms.TextBox
         Me.txtRauthor = New System.Windows.Forms.TextBox
         Me.txtRdescription = New System.Windows.Forms.TextBox
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
@@ -232,7 +232,7 @@ Partial Class frmReturn
         '
         Me.grp_Rgroup.Controls.Add(Me.txtRname)
         Me.grp_Rgroup.Controls.Add(Me.cboRborrowerId)
-        Me.grp_Rgroup.Controls.Add(Me.txtRbookTitle)
+        Me.grp_Rgroup.Controls.Add(Me.txtRTitle)
         Me.grp_Rgroup.Controls.Add(Me.txtRauthor)
         Me.grp_Rgroup.Controls.Add(Me.txtRdescription)
         Me.grp_Rgroup.Controls.Add(Me.GroupBox2)
@@ -270,13 +270,13 @@ Partial Class frmReturn
         Me.cboRborrowerId.Size = New System.Drawing.Size(65, 25)
         Me.cboRborrowerId.TabIndex = 30
         '
-        'txtRbookTitle
+        'txtRTitle
         '
-        Me.txtRbookTitle.Enabled = False
-        Me.txtRbookTitle.Location = New System.Drawing.Point(27, 89)
-        Me.txtRbookTitle.Name = "txtRbookTitle"
-        Me.txtRbookTitle.Size = New System.Drawing.Size(331, 25)
-        Me.txtRbookTitle.TabIndex = 29
+        Me.txtRTitle.Enabled = False
+        Me.txtRTitle.Location = New System.Drawing.Point(27, 89)
+        Me.txtRTitle.Name = "txtRTitle"
+        Me.txtRTitle.Size = New System.Drawing.Size(331, 25)
+        Me.txtRTitle.TabIndex = 29
         '
         'txtRauthor
         '
@@ -1316,7 +1316,7 @@ Partial Class frmReturn
     Friend WithEvents grp_Rgroup As System.Windows.Forms.GroupBox
     Friend WithEvents txtRname As System.Windows.Forms.TextBox
     Friend WithEvents cboRborrowerId As System.Windows.Forms.TextBox
-    Friend WithEvents txtRbookTitle As System.Windows.Forms.TextBox
+    Friend WithEvents txtRTitle As System.Windows.Forms.TextBox
     Friend WithEvents btn_Rsave As System.Windows.Forms.Button
     Friend WithEvents txtRauthor As System.Windows.Forms.TextBox
     Friend WithEvents txtRCopyBorrowed As System.Windows.Forms.TextBox

@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Module crud  
+Module crud
     Public con As MySqlConnection = mysqldb()
     Public cmd As New MySqlCommand
     Public da As New MySqlDataAdapter
@@ -25,7 +25,7 @@ Module crud
                 With cmd
                     .Connection = con
                     .CommandText = edit
-                    result = cmd.ExecuteNonQuery 
+                    result = cmd.ExecuteNonQuery
                 End With
                 If result > 0 Then
                     MsgBox(msgedit)
@@ -34,16 +34,15 @@ Module crud
                 With cmd
                     .Connection = con
                     .CommandText = add
-                    result = cmd.ExecuteNonQuery 
+                    result = cmd.ExecuteNonQuery
                 End With
                 If result > 0 Then
-                    MsgBox(msgadd) 
-
+                    MsgBox(msgadd)
                 End If
             End If
 
         Catch ex As Exception
-            '  MsgBox(ex.Message)
+            'MsgBox(ex.Message)
         Finally
             con.Close()
         End Try
@@ -57,7 +56,7 @@ Module crud
                 .Connection = con
                 .CommandText = sql
                 cmd.ExecuteNonQuery()
-               
+
             End With
             con.Close()
         Catch ex As Exception
@@ -77,7 +76,7 @@ Module crud
 
         Catch ex As Exception
             '  MsgBox(ex.Message & " create")
-        Finally 
+        Finally
             con.Close()
         End Try
 
@@ -113,12 +112,10 @@ Module crud
             da.Fill(dt)
 
         Catch ex As Exception
-            '   MsgBox(ex.Message & "reloadtxt")
+            'MsgBox(ex.Message & "reloadtxt")
         Finally
-
             con.Close()
             da.Dispose()
-
         End Try
     End Sub
     Function updates(ByVal sql As String)
@@ -152,7 +149,7 @@ Module crud
             '                     , MessageBoxButtons.YesNo, MessageBoxIcon.Information) _
             '                     = Windows.Forms.DialogResult.Yes Then
             result = cmd.ExecuteNonQuery
-         
+
             'End If
             con.Close()
         Catch ex As Exception

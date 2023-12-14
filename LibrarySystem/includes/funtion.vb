@@ -1,7 +1,9 @@
 ﻿
 Imports MySql.Data.MySqlClient
+
 Module funtion
     Public con As MySqlConnection = mysqldb()
+
     Public Sub cleartext(ByVal group As Object)
         For Each ctrl As Control In group.Controls
             If ctrl.GetType Is GetType(TextBox) Then
@@ -15,11 +17,8 @@ Module funtion
         Next
     End Sub
 
-
     Public Sub getallforms()
         Try
- 
-
             For Each f As Form In My.Application.OpenForms
                 Select Case f.Name
                     Case "frm_Login"
@@ -43,10 +42,8 @@ Module funtion
     End Sub
 
     Public Sub cbo_fill(ByVal cbo As ComboBox, ByVal member As String, ByVal id As String, ByVal table As String)
-
         Try
             con.Open()
-
             With cmd
                 .Connection = con
                 .CommandText = "Select * From " & table
@@ -72,8 +69,7 @@ Module funtion
     Public Sub emptymessage()
         MsgBox("There are empty fields left that must be filled up!", MsgBoxStyle.Exclamation)
     End Sub
- 
- 
+
     Public inc As Integer = 0
     Public maxrows As Integer
 
@@ -148,7 +144,7 @@ Module funtion
             MsgBox(ex.Message)
         End Try
     End Sub
-  
+
     Public Sub ErrorMessage(ByVal lbl As Label, ByVal message As String, ByVal btn As Button)
         lbl.BackColor = Color.Red
         lbl.ForeColor = Color.White
@@ -301,7 +297,7 @@ Module funtion
         Catch ex As Exception
             'MsgBox(ex.Message)
         End Try
-       
+
     End Sub
     Public Sub timeOfresearch(ByVal id As Integer)
 
@@ -344,6 +340,7 @@ Module funtion
 
         End If
     End Sub
+
     Public Sub timeOfOvernight(ByVal id As Integer, ByVal hoursinterval As Integer)
         If hoursinterval >= 24 Then
             'sql = "Update `borrow` SET `status` = 'Due'  WHERE borrowed=true AND `purpose`='Overnight' and borrow_id in ('" & id & "')"
@@ -354,6 +351,7 @@ Module funtion
             Return
         End If
     End Sub
+
     Public Sub timeOfthreeDays(ByVal id As Integer, ByVal hoursinterval As Integer)
         If hoursinterval >= 73 Then
             'sql = "Update `borrow` SET `status` = 'Due'  WHERE borrowed=true AND `purpose`='Overnight' and borrow_id in ('" & id & "')"
@@ -364,19 +362,21 @@ Module funtion
             Return
         End If
     End Sub
+
     Public Sub formClose()
-        frmBooks.Close()
-        frmBorrow.Close()
-        frmBorrower.Close()
-        frmCategory.Close()
+        InventoryForm.Close()
+        BorrowerForm.Close()
+        BorrowForm.Close()
+        CategoryForm.Close()
         frmListBooks.Close()
         frmListBorrower.Close()
         frmPayments.Close()
         frmReport.Close()
         frmReturn.Close()
-        frmUser.Close()
+        UserForm.Close()
 
     End Sub
+
     'Public Sub formulaofpayments(ByVal frm As frmPayments)
     '    Try
     '        Dim totaltime As Integer
@@ -393,9 +393,10 @@ Module funtion
     '        'MsgBox(ex.Message & "lbl_Rduedate_Click")
     '    End Try
     'End Sub
+
     Public Sub formulaofpayments()
         Try
-            Dim totalhours As Integer 
+            Dim totalhours As Integer
             Dim ts As TimeSpan = TimeSpan.Parse(frmPayments.txtOverdueTime.Text)
             'Dim TValueMin As Integer = ts.Minutes.ToString
             Dim tValueHour As Integer = ts.Hours.ToString
@@ -409,11 +410,11 @@ Module funtion
             'MsgBox(ex.Message & "lbl_Rduedate_Click")
         End Try
     End Sub
+
     Public Sub columnInvisible(ByVal dtg As DataGridView)
         Dim c As DataGridViewColumn
         For Each c In dtg.Columns
 
         Next
-
     End Sub
 End Module

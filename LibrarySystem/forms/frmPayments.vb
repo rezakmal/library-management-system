@@ -5,8 +5,8 @@
     End Sub
 
     Private Sub frmPayments_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        sql = "SELECT br.`BorrowerId`, `BookTitle`,`DateBorrowed`, `Purpose`, `DueDate` , BorrowId,br.AccessionNo " & _
-              " FROM `tblborrow` br,`tblbooks` b,`tblborrower` bw  " & _
+        sql = "SELECT br.`BorrowerId`, `Title`,`DateBorrowed`, `Purpose`, `DueDate` , BorrowId,br.AccessionNo " & _
+              " FROM `tblborrow` br,`tblinventory` b,`tblborrower` bw  " & _
               " WHERE br.AccessionNo=b.AccessionNo AND br.`BorrowerId`=bw.`BorrowerId` AND br.Status='Borrowed' AND Due=1 "
         reloadDtg(sql, dtgPenalties)
         dtgPenalties.Columns(5).Visible = False
@@ -17,8 +17,8 @@
     End Sub
 
     Private Sub txtSearchPborrower_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearchPborrower.TextChanged
-        sql = "SELECT br.`BorrowerId`, `BookTitle`,`DateBorrowed`, `Purpose`, `DueDate` , BorrowId,br.AccessionNo " & _
-             " FROM `tblborrow` br,`tblbooks` b,`tblborrower` bw  " & _
+        sql = "SELECT br.`BorrowerId`, `Title`,`DateBorrowed`, `Purpose`, `DueDate` , BorrowId,br.AccessionNo " & _
+             " FROM `tblborrow` br,`tblinventory` b,`tblborrower` bw  " & _
              " WHERE br.AccessionNo=b.AccessionNo AND br.`BorrowerId`=bw.`BorrowerId` AND br.Status='Borrowed' AND Due=1 AND   br.`BorrowerId` Like '%" & txtSearchPborrower.Text & "%'"
         reloadDtg(sql, dtgPenalties)
         dtgPenalties.Columns(5).Visible = False
@@ -55,7 +55,7 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-       
+
     End Sub
 
     Private Sub txtamount_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtamount.TextChanged
@@ -133,7 +133,7 @@
 
                     'for the items
 
-                    sql = "UPDATE  `tblbooks` SET  `Status` =  'Available' WHERE  `AccessionNo` = '" & dtgPenalties.CurrentRow.Cells(6).Value & "'"
+                    sql = "UPDATE  `tblinventory` SET  `Status` =  'Available' WHERE  `AccessionNo` = '" & dtgPenalties.CurrentRow.Cells(6).Value & "'"
                     updates(sql)
 
                     'for the borrow
@@ -191,7 +191,7 @@
         End If
     End Sub
 #End Region
- 
+
     Private Sub txtOverdueTime_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtOverdueTime.TextChanged
 
     End Sub
