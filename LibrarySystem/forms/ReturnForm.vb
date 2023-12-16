@@ -1,24 +1,17 @@
 ﻿Public Class ReturnForm
 
     Private Sub ReturnForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
-        sql = "SELECT br.`BorrowerId`, `Title`, `DateBorrowed`, `Purpose`, `DueDate` , BorrowId,br.AccessionNo " &
+        sql = "SELECT br.`BorrowerId`, `Title`, `DateBorrowed`, `Purpose`, `DueDate`, BorrowId, br.AccessionNo " &
         " FROM `tblborrow` br,`tblinventory` b,`tblborrower` bw  " &
         " WHERE br.AccessionNo=b.AccessionNo AND br.`BorrowerId`=bw.`BorrowerId` AND br.Status='Borrowed' AND Due=0 ORDER BY BorrowId Desc"
         reloadDtg(sql, dtg_RlistReturn)
         dtg_RlistReturn.Columns(5).Visible = False
         dtg_RlistReturn.Columns(6).Visible = False
 
-
         sql = "SELECT bw.`BorrowerId`, `Firstname`, `Lastname`,DateBorrowed,b.`AccessionNo`,`Title`, `Description`, `DateReturned` " &
         " FROM `tblreturn` r, `tblborrow` br,`tblborrower` bw, `tblinventory` b " &
         " WHERE r.`BorrowId`=br.`BorrowId` AND br.`AccessionNo`=b.`AccessionNo` AND br.`BorrowerId`=bw.`BorrowerId` AND br.`Status` = 'Returned' ORDER BY ReturnId Desc"
         reloadDtg(sql, dtgListreturned)
-
-
-
-
     End Sub
 
     Private Sub dtg_RlistReturn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtg_RlistReturn.Click
@@ -33,7 +26,6 @@
                     txtRTitle.Text = .Item("Title")
                     txtRdescription.Text = .Item("Description")
                 End With
-
             End If
         Catch ex As Exception
 

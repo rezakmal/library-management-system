@@ -104,13 +104,13 @@
                     txtdue.Text = Format(formatdate, "yyyy-MM-dd HH:mm:ss")
                 End If
 
-                sql = "INSERT INTO  `tblborrow`  " &
-                " (`AccessionNo`, `NoCopies`, `DateBorrowed`, `Purpose`, `Status`, `DueDate`, `BorrowerId`) " &
-                " VALUES ('" & txtAccesionNumBorrow.Text & "',1,NOW(),'" & cboPurpose.Text & "', 'Borrowed','" & txtdue.Text & "','" & txtBorrowerId.Text & "')"
+                sql = "INSERT INTO  `tblborrow` " &
+                " (`AccessionNo`, `NoCopies`, `DateBorrowed`, `Purpose`, `Status`, `DueDate`, `BorrowerId`, `Due`, `Remarks`) " &
+                " VALUES ('" & txtAccesionNumBorrow.Text & "',1,NOW(),'" & cboPurpose.Text & "', 'Borrowed','" & txtdue.Text & "','" & txtBorrowerId.Text & "', 0, 'On Time')"
                 result = create(sql)
 
                 If result = True Then
-                    MsgBox("Book has been borrowed in the library")
+                    MsgBox("Inventory has been borrowed!")
                     updates("UPDATE tblinventory set Status = 'Not Available' Where AccessionNo='" & txtAccesionNumBorrow.Text & "'")
                 End If
 

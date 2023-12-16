@@ -1275,7 +1275,7 @@ Partial Class ReturnForm
         Me.AcceptButton = Me.btn_Rsave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1116, 554)
+        Me.ClientSize = New System.Drawing.Size(1116, 473)
         Me.Controls.Add(Me.TabControl3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4)
