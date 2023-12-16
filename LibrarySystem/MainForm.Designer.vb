@@ -33,6 +33,8 @@ Partial Class MainForm
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.tsLogin = New System.Windows.Forms.ToolStripButton()
         Me.tsSearch = New System.Windows.Forms.ToolStripButton()
+        Me.lblTime = New System.Windows.Forms.ToolStripLabel()
+        Me.lblDate = New System.Windows.Forms.ToolStripLabel()
         Me.DirectoryEntry1 = New System.DirectoryServices.DirectoryEntry()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -56,8 +58,6 @@ Partial Class MainForm
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.btnLogs = New System.Windows.Forms.Button()
         Me.btnReports = New System.Windows.Forms.Button()
-        Me.lblTime = New System.Windows.Forms.ToolStripLabel()
-        Me.lblDate = New System.Windows.Forms.ToolStripLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -146,6 +146,20 @@ Partial Class MainForm
         Me.tsSearch.Size = New System.Drawing.Size(39, 56)
         Me.tsSearch.Text = "Cari"
         Me.tsSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'lblTime
+        '
+        Me.lblTime.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.lblTime.Name = "lblTime"
+        Me.lblTime.Size = New System.Drawing.Size(35, 56)
+        Me.lblTime.Text = "Jam"
+        '
+        'lblDate
+        '
+        Me.lblDate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(61, 56)
+        Me.lblDate.Text = "Tanggal"
         '
         'GroupBox2
         '
@@ -385,20 +399,6 @@ Partial Class MainForm
         Me.btnReports.TabIndex = 0
         Me.btnReports.Text = "Inventaris"
         Me.btnReports.UseVisualStyleBackColor = True
-        '
-        'lblTime
-        '
-        Me.lblTime.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(35, 56)
-        Me.lblTime.Text = "Jam"
-        '
-        'lblDate
-        '
-        Me.lblDate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(61, 56)
-        Me.lblDate.Text = "Tanggal"
         '
         'MainForm
         '

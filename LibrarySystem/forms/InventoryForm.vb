@@ -72,9 +72,9 @@
                 txtAccessionNo.Text = .CurrentRow.Cells(0).Value
                 txtTitle.Text = .CurrentRow.Cells(1).Value
                 txtDesc.Text = .CurrentRow.Cells(2).Value
-                dtpDatePublish.Value = Format(.CurrentRow.Cells(4).Value, "dd/MM/yyyy")
-                txtPublisher.Text = .CurrentRow.Cells(5).Value
-                cboCategory.Text = .CurrentRow.Cells(6).Value
+                dtpDatePublish.Value = Format(.CurrentRow.Cells(3).Value, "dd/MM/yyyy")
+                txtPublisher.Text = .CurrentRow.Cells(4).Value
+                cboCategory.Text = .CurrentRow.Cells(5).Value
 
                 btnUpdate.Enabled = True
                 btnSave.Enabled = False
@@ -96,9 +96,9 @@
                         txtAccessionNo.Text = .CurrentRow.Cells(0).Value
                         txtTitle.Text = .CurrentRow.Cells(1).Value
                         txtDesc.Text = .CurrentRow.Cells(2).Value
-                        dtpDatePublish.Value = Format(.CurrentRow.Cells(4).Value, "dd/MM/yyyy")
-                        txtPublisher.Text = .CurrentRow.Cells(5).Value
-                        cboCategory.Text = .CurrentRow.Cells(6).Value
+                        dtpDatePublish.Value = Format(.CurrentRow.Cells(3).Value, "dd/MM/yyyy")
+                        txtPublisher.Text = .CurrentRow.Cells(4).Value
+                        cboCategory.Text = .CurrentRow.Cells(5).Value
                         'txtPrice.Text = .CurrentRow.Cells(7).Value
 
                     End With
@@ -164,8 +164,8 @@
                     txtTitle.Text = .Item(1)
                     txtDesc.Text = .Item(2)
                     dtpDatePublish.Value = Format(.Item(3), "yyyy-MM-dd")
-                    txtPublisher.Text = .Item(5)
-                    cboCategory.Text = .Item(6)
+                    txtPublisher.Text = .Item(4)
+                    cboCategory.Text = .Item(5)
 
                     btnUpdate.Enabled = True
                     btnSave.Enabled = False

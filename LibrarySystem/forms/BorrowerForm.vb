@@ -17,13 +17,13 @@ Public Class BorrowerForm
 
                 sql = "SELECT * FROM `tblborrower` WHERE `BorrowerId`=" & txt_bid.Text
 
-                sqladd = "insert into tblborrower (`BorrowerId`, `Firstname`, `Lastname`, `MiddleName`, `Address`, " _
+                sqladd = "INSERT INTO tblborrower (`BorrowerId`, `Firstname`, `Lastname`, `MiddleName`, `Address`, " _
                        & "`Sex`, `ContactNo`, `BorrowerType`)" _
                        & "values ('" & txt_bid.Text & "','" & txt_fname.Text & "','" & txt_lname.Text _
                        & "','" & txt_mname.Text & "','" & rch_address.Text _
                        & "','" & gender & "','" & txtContact.Text & "','Student')"
 
-                sqledit = "update  tblborrower set  `Firstname`='" & txt_fname.Text _
+                sqledit = "UPDATE tblborrower set  `Firstname`='" & txt_fname.Text _
                       & "', `Lastname`='" & txt_lname.Text & "', `MiddleName`='" & txt_mname.Text _
                       & "', `Address`='" & rch_address.Text & "', `Sex`='" & gender _
                       & "', `ContactNo` ='" & txtContact.Text & "', `BorrowerType`='Student' where `BorrowerId`='" & txt_bid.Text & "'"

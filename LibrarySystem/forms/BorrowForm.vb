@@ -104,8 +104,8 @@
                     txtdue.Text = Format(formatdate, "yyyy-MM-dd HH:mm:ss")
                 End If
 
-                sql = "INSERT INTO  `tblborrow`  " & _
-                " (`AccessionNo`, `NoCopies`, `DateBorrowed`, `Purpose`, `Status`, `DueDate`, `BorrowerId`) " & _
+                sql = "INSERT INTO  `tblborrow`  " &
+                " (`AccessionNo`, `NoCopies`, `DateBorrowed`, `Purpose`, `Status`, `DueDate`, `BorrowerId`) " &
                 " VALUES ('" & txtAccesionNumBorrow.Text & "',1,NOW(),'" & cboPurpose.Text & "', 'Borrowed','" & txtdue.Text & "','" & txtBorrowerId.Text & "')"
                 result = create(sql)
 

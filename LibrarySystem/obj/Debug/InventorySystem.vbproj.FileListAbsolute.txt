@@ -26,10 +26,6 @@ E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmLibraryCard.resou
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmListBooks.resources
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmListBorrower.resources
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmListofBooks.resources
-E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmPayments.resources
-E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmReport.resources
-E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmReturn.resources
-E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.frmUserlogs.resources
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.Resources.resources
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.vbproj.GenerateResource.cache
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.vbproj.CoreCompileInputs.cache
@@ -44,3 +40,7 @@ E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.BorrowerForm.resourc
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.UserForm.resources
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.CategoryForm.resources
 E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.BorrowForm.resources
+E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.ReportForm.resources
+E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.AuditForm.resources
+E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.PaymentForm.resources
+E:\Learning\PemVis2\LibrarySystem\obj\Debug\InventorySystem.ReturnForm.resources

@@ -98,28 +98,28 @@
     End Sub
 
     Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
-        With frmReturn
+        With ReturnForm
             .Show()
             .Focus()
         End With
     End Sub
 
     Private Sub btnOverdue_Click(sender As Object, e As EventArgs) Handles btnOverdue.Click
-        With frmPayments
+        With PaymentForm
             .Show()
             .Focus()
         End With
     End Sub
 
     Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
-        With frmReport
+        With ReportForm
             .Show()
             .Focus()
         End With
     End Sub
 
     Private Sub btnLogs_Click(sender As Object, e As EventArgs) Handles btnLogs.Click
-        With frmUserlogs
+        With AuditForm
             .Show()
             .Focus()
         End With

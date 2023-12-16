@@ -156,22 +156,22 @@
     <Compile Include="forms\frmListofBooks.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmPayments.Designer.vb">
-      <DependentUpon>frmPayments.vb</DependentUpon>
+    <Compile Include="forms\PaymentForm.Designer.vb">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmPayments.vb">
+    <Compile Include="forms\PaymentForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmReport.Designer.vb">
-      <DependentUpon>frmReport.vb</DependentUpon>
+    <Compile Include="forms\ReportForm.Designer.vb">
+      <DependentUpon>ReportForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmReport.vb">
+    <Compile Include="forms\ReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmReturn.Designer.vb">
-      <DependentUpon>frmReturn.vb</DependentUpon>
+    <Compile Include="forms\ReturnForm.Designer.vb">
+      <DependentUpon>ReturnForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmReturn.vb">
+    <Compile Include="forms\ReturnForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\UserForm.Designer.vb">
@@ -180,10 +180,10 @@
     <Compile Include="forms\UserForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmUserlogs.Designer.vb">
-      <DependentUpon>frmUserlogs.vb</DependentUpon>
+    <Compile Include="forms\AuditForm.Designer.vb">
+      <DependentUpon>AuditForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmUserlogs.vb">
+    <Compile Include="forms\AuditForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\rptLibrary.vb">
@@ -255,24 +255,24 @@
     <EmbeddedResource Include="forms\frmListofBooks.resx">
       <DependentUpon>frmListofBooks.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmPayments.resx">
-      <DependentUpon>frmPayments.vb</DependentUpon>
+    <EmbeddedResource Include="forms\PaymentForm.resx">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmReport.resx">
-      <DependentUpon>frmReport.vb</DependentUpon>
+    <EmbeddedResource Include="forms\ReportForm.resx">
+      <DependentUpon>ReportForm.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmReturn.resx">
-      <DependentUpon>frmReturn.vb</DependentUpon>
+    <EmbeddedResource Include="forms\ReturnForm.resx">
+      <DependentUpon>ReturnForm.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UserForm.resx">
       <DependentUpon>UserForm.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmUserlogs.resx">
-      <DependentUpon>frmUserlogs.vb</DependentUpon>
+    <EmbeddedResource Include="forms\AuditForm.resx">
+      <DependentUpon>AuditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\rptLibrary.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

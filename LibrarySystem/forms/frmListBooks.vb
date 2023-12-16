@@ -14,7 +14,7 @@
 
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
         Try
-            If dtgList.CurrentRow.Cells(7).Value = "Available" Then
+            If dtgList.CurrentRow.Cells(6).Value = "Available" Then
                 BorrowForm.txtAccesionNumBorrow.Text = dtgList.CurrentRow.Cells(0).Value
                 Me.Close()
             Else

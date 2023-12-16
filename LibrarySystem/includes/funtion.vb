@@ -370,14 +370,14 @@ Module funtion
         CategoryForm.Close()
         frmListBooks.Close()
         frmListBorrower.Close()
-        frmPayments.Close()
-        frmReport.Close()
-        frmReturn.Close()
+        PaymentForm.Close()
+        ReportForm.Close()
+        ReturnForm.Close()
         UserForm.Close()
 
     End Sub
 
-    'Public Sub formulaofpayments(ByVal frm As frmPayments)
+    'Public Sub formulaofpayments(ByVal frm As PaymentForm)
     '    Try
     '        Dim totaltime As Integer
     '        Dim ts As TimeSpan = TimeSpan.Parse(frm.txtOverdueTime.Text)
@@ -397,14 +397,14 @@ Module funtion
     Public Sub formulaofpayments()
         Try
             Dim totalhours As Integer
-            Dim ts As TimeSpan = TimeSpan.Parse(frmPayments.txtOverdueTime.Text)
+            Dim ts As TimeSpan = TimeSpan.Parse(PaymentForm.txtOverdueTime.Text)
             'Dim TValueMin As Integer = ts.Minutes.ToString
             Dim tValueHour As Integer = ts.Hours.ToString
             Dim condays As Integer = 24 * ts.Days.ToString
 
             totalhours = condays + tValueHour
-            totalhours = totalhours / Val(frmPayments.txthours.Text)
-            frmPayments.txtTotPay.Text = totalhours * Val(frmPayments.txtamount.Text)
+            totalhours = totalhours / Val(PaymentForm.txthours.Text)
+            PaymentForm.txtTotPay.Text = totalhours * Val(PaymentForm.txtamount.Text)
 
         Catch ex As Exception
             'MsgBox(ex.Message & "lbl_Rduedate_Click")
